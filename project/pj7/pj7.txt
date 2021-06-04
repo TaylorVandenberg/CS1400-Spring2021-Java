@@ -1,0 +1,185 @@
+Script started on 2021-05-03 20:12:14-07:00 [TERM="xterm" TTY="/dev/pts/42" COLUMNS="125" LINES="67"]
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m pwd
+/user/tdvandenberg/cs1400/project/pj7
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m ;s -l
+bash: syntax error near unexpected token `;'
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m ls -l
+total 7
+-rw------- 1 tdvandenberg cpp 1622 May  3 20:11 Employee.java
+-rw------- 1 tdvandenberg cpp 1076 May  3 20:11 ProductionWorker.java
+-rw------- 1 tdvandenberg cpp  849 May  3 20:12 WorkerTest.java
+-rw------- 1 tdvandenberg cpp    0 May  3 20:12 [0m[00;32mpj7.txt[0m
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m cat Employee.java
+//Taylor Vandenberg
+//CS1400, section 03
+//Project 7 - Employee Inheritance
+//5-3-21
+public class Employee {
+   private String employee;
+   private String employeeNum;
+   private String hireDate;
+
+   private String wrapper(String employeeNum)
+   {
+     if (employeeNum.length() == 5)
+     {
+       for (int i=0; i<2; i++)
+       {
+         if (!Character.isDigit(employeeNum.charAt(i)))
+            return "INVALID EMPLOYEE NUMBER";
+       }
+       if (!(employeeNum.charAt(3)=='-'))
+         return "INVALID EMPLOYEE NUMBER";
+       else if (!Character.isLetter(employeeNum.charAt(4)))
+         return "INVALID EMPLOYEE NUMBER";
+       else
+         return employeeNum;
+     }
+     else
+         return "INVALID EMPLOYEE NUMBER";
+   }
+   public Employee()
+   {
+      employee="";
+      employeeNum="";
+      hireDate="";
+   }
+   public Employee(String employee, String employeeNum, String hireDate)
+   {
+      this.employee=employee;
+      this.employeeNum=wrapper(employeeNum);
+      this.hireDate=hireDate;
+   }
+   public String getEmployee()
+   {
+      return employee;
+   }
+   public String getEmployeeNum()
+   {
+      return employeeNum;
+   }
+   public String getHireDate()
+   {
+      return hireDate;
+   }
+   public void setEmployee(String employee)
+   {
+      this.employee=employee;
+   }
+   public void setEmployeeNum(String employeeNum)
+   {
+      this.employeeNum=employeeNum;
+   }
+   public void setHireDate(String hireDate)
+   {
+      this.hireDate=hireDate;
+   }
+   public String toString()
+   {
+      return "Name: "+employee
+      +"\nEmployee Number: "+employeeNum
+      +"\nHire Date: "+hireDate;
+   }
+}
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m cat ProductionWorker.java
+//Taylor Vandenberg
+//CS1400, section 03
+//Project 7 - Employee Inheritance
+//5-3-21
+public class ProductionWorker extends Employee {
+   private Integer shift;
+   private Double hourlyRate;
+
+   public ProductionWorker()
+   {
+      super();
+      shift=1;
+      hourlyRate=0.0;
+   }
+   public ProductionWorker(String employee, String employeeNum, String 
+hireDate, int shift, double hourlyRate)
+   {
+      super(employee, employeeNum, hireDate);
+      this.shift=shift;
+      this.hourlyRate=hourlyRate;
+   }
+   public String toString()
+   {
+      String day = "INVALID SHIFT NUMBER";
+      if(shift==1)
+         day ="Day";
+      else if(shift==2)
+         day="Night";
+      return String.format(super.toString()
+      +"\nShift: "+day
+      +"\nHourly Pay Rate: $%.2f",hourlyRate);
+   }
+   public int getShift()
+   {
+      return shift;
+   }
+   public double getHourlyRate()
+   {
+      return hourlyRate;
+   }
+   public void setShift(int shift)
+   {
+      this.shift=shift;
+   }
+   public void setHourlyRate(double hourlyRate)
+   {
+      this.hourlyRate=hourlyRate;
+   }
+}
+
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m cat WorkerTest.java
+//Taylor Vandenberg
+//CS1400, section 03
+//Project 7 - Employee Inheritance
+//5-3-21
+public class WorkerTest {
+   public static void main(String args[])
+   {
+      ProductionWorker w1 = new ProductionWorker("John Smith", "123-A", "11-15-2005", 1, 23.50);
+      ProductionWorker w2 = new ProductionWorker();
+      w2.setEmployee("Joan Jones");
+      w2.setEmployeeNum("222-L");
+      w2.setHireDate("12-12-2018");
+      w2.setShift(2);
+      w2.setHourlyRate(18.50);
+      ProductionWorker w3 = new ProductionWorker("Tony Gaddis", "Joe Momma", "1-23-2006", 420, 19.50);
+
+   System.out.println("Here's the first production worker.");
+   System.out.println(w1);
+   System.out.println("\nHere's the second production worker.");
+   System.out.println(w2);
+   System.out.println("\nHere's the third production worker.");
+   System.out.println(w3);
+   }
+}
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m javac WorkerTest.java
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m java WorkerTest
+Here's the first production worker.
+Name: John Smith
+Employee Number: 123-A
+Hire Date: 11-15-2005
+Shift: Day
+Hourly Pay Rate: $23.50
+
+Here's the second production worker.
+Name: Joan Jones
+Employee Number: 222-L
+Hire Date: 12-12-2018
+Shift: Night
+Hourly Pay Rate: $18.50
+
+Here's the third production worker.
+Name: Tony Gaddis
+Employee Number: INVALID EMPLOYEE NUMBER
+Hire Date: 1-23-2006
+Shift: INVALID SHIFT NUMBER
+Hourly Pay Rate: $19.50
+]0;tdvandenberg@abbott:~/cs1400/project/pj7[01;32mtdvandenberg@abbott[01;34m ~/cs1400/project/pj7 $[00m exit
+exit
+
+Script done on 2021-05-03 20:13:04-07:00 [COMMAND_EXIT_CODE="0"]

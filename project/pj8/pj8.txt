@@ -1,0 +1,160 @@
+Script started on 2021-05-10 18:10:07-07:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="119" LINES="64"]
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m pwd
+/user/tdvandenberg/cs1400/project/pj8
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m ls -l
+total 6
+-rw------- 1 tdvandenberg cpp 1295 May 10 18:09 Calculator.java
+-rw------- 1 tdvandenberg cpp 1400 May 10 18:09 CalculatorTest.java
+-rw------- 1 tdvandenberg cpp  354 May 10 18:09 UnknownOperatorException.java
+-rw------- 1 tdvandenberg cpp    0 May 10 18:10 [0m[00;32mpj8.txt[0m
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m cat UnknownOperatorException.java
+// Taylor Vandenberg
+// CS1400, section 03
+// Project 8 - Calculator with Exception Handling
+// 5/10/21
+public class UnknownOperatorException extends Exception {
+   public UnknownOperatorException()
+   {
+      super("Must specify an operation.");
+   }
+   public UnknownOperatorException(char str)
+   {
+      super(str+" is an unknown opertion.");
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m cat Calculator.java
+// Taylor Vandenberg
+// CS1400, section 03
+// Project 8 - Calculator with Exception Handling
+// 5/10/21
+public class Calculator {
+   private double result;
+   public Calculator()
+   {
+      result=0.0;
+   }
+   public void doCalculation(String expression) throws NumberFormatException, UnknownOperatorException
+   {
+      char[] validCalculations={'/','+','-','%','*'};
+      String cleanExpression = expression.trim();
+      char operationType = cleanExpression.charAt(0);
+      double userNum;
+      for(int i=0; i<validCalculations.length; i++)
+      {
+            userNum=Double.parseDouble(cleanExpression.substring(1));
+            if(operationType=='/')
+            {
+               result=result/userNum;
+               return;
+            }
+            else if(operationType=='+')
+            {
+               result=result+userNum;
+               return;
+            }
+            else if(operationType=='-')
+            {
+               result=result-userNum;
+               return;
+            }
+            else if(operationType=='*')
+            {
+               result=result*userNum;
+               return;
+            }
+            else
+               throw new UnknownOperatorException(operationType);
+      }
+   }
+   public double getResult()
+   {
+      return result;
+   }
+}
+
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m cat CalculatorTest.java
+// Taylor Vandenberg
+// CS1400, section 03
+// Project 8 - Calculator with Exception Handling
+// 5/10/21
+import java.util.Scanner;
+public class CalculatorTest {
+   public static void main(String[] args) throws Exception
+   {
+      String userInput="";
+      System.out.println("Calculator is on.");
+      Calculator calc = new Calculator();
+      System.out.println("result = "+calc.getResult());
+      Scanner kb = new Scanner(System.in);
+         userInput=kb.nextLine();
+         while(userInput.toLowerCase()!="r")
+         {
+            try{
+               if(userInput.equals(""))
+                  System.out.println("Must specify an operation.");
+               else if(userInput.toLowerCase().trim().equals("r"))
+                  break;
+               else
+               {
+                  calc.doCalculation(userInput);
+                  System.out.println("updated result = "+calc.getResult());
+               }
+               userInput=kb.nextLine();
+            }
+            catch (UnknownOperatorException e)
+            {
+               System.out.println(e.getMessage());
+               userInput=kb.nextLine();
+            }
+            catch (Exception e)
+            {
+               System.out.println("Invalid non-numeric operand");
+               userInput=kb.nextLine();
+            }
+         }
+         System.out.println("final result = "+calc.getResult());
+      }
+   }
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m javac Calcul[K[K[Kculatr[KorTest.java
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 80880 bytes for Chunk::new
+[thread 140215847994944 also had an error]
+# An error report file with more information is saved as:
+# /user/tdvandenberg/cs1400/project/pj8/hs_err_pid35050.log
+#
+# Can't open file to dump replay data. Error: Cannot allocate memory
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m javac CalculatorTest.java
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m java CalculatorTest
+Calculator is on.
+result = 0.0
+    +3
+updated result = 3.0
+-     5
+updated result = -2.0
+    *     10
+updated result = -20.0
+/-2
+updated result = 10.0
+%3
+% is an unknown opertion.
+# quir t
+Invalid non-numeric operand
+
+Must specify an operation.
++-*/
+Invalid non-numeric operand
++a
+Invalid non-numeric operand
+* daisy
+Invalid non-numeric operand
+/ 1.2.3
+Invalid non-numeric operand
+   -8
+updated result = 2.0
+   r
+final result = 2.0
+]0;tdvandenberg@costello:~/cs1400/project/pj8[01;32mtdvandenberg@costello[01;34m ~/cs1400/project/pj8 $[00m exit
+exit
+
+Script done on 2021-05-10 18:12:00-07:00 [COMMAND_EXIT_CODE="0"]
