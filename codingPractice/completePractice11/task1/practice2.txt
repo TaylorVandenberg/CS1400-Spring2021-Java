@@ -1,0 +1,281 @@
+Script started on 2021-05-07 17:52:41-07:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="119" LINES="64"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m //time started 5:52pm May 7 2021
+bash: //time: No such file or directory
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice/completePractice11/task1
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m ls -l
+total 19
+-rw------- 1 tdvandenberg cpp 1388 May  7 17:49 AccountTest.class
+-rw------- 1 tdvandenberg cpp 1128 May  7 17:47 AccountTest.java
+-rw------- 1 tdvandenberg cpp 1175 May  7 17:49 BankAccount.class
+-rw------- 1 tdvandenberg cpp 1050 May  7 17:47 BankAccount.java
+-rw------- 1 tdvandenberg cpp  579 May  7 17:49 NegativeDepositException.class
+-rw------- 1 tdvandenberg cpp  281 May  7 17:48 NegativeDepositException.java
+-rw------- 1 tdvandenberg cpp  613 May  7 17:49 NegativeStartingBalanceException.class
+-rw------- 1 tdvandenberg cpp  300 May  7 17:48 NegativeStartingBalanceException.java
+-rw------- 1 tdvandenberg cpp  583 May  7 17:49 NegativeWithdrawException.class
+-rw------- 1 tdvandenberg cpp  262 May  7 17:49 NegativeWithdrawException.java
+-rw------- 1 tdvandenberg cpp  607 May  7 17:49 WithdrawExceedBalanceException.class
+-rw------- 1 tdvandenberg cpp  291 May  7 17:49 WithdrawExceedBalanceException.java
+-rw------- 1 tdvandenberg cpp    0 May  7 17:52 [0m[00;32mpractice2.txt[0m
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m cat NegativeStartingBalanceException.java
+public class NegativeStartingBalanceException extends Exception
+{
+   public NegativeStartingBalanceException()
+   {
+      super("Error: Negative starting balance");
+   }
+   public NegativeStartingBalanceException(double amount)
+   {
+      super("Error: Negative starting balance: " + amount);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m cat NegativeDepositException.java
+public class NegativeDepositException extends Exception{
+      public NegativeDepositException()
+      {
+         super("Error: Negative deposit");
+      }
+      public NegativeDepositException(double amount)
+      {
+         super("Error: Negative deposit: " + amount);
+      }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m cat NegativeWithdrawException.java
+public class NegativeWithdrawException extends Exception{
+   public NegativeWithdrawException()
+   {
+      super("Error: Negative withdraw");
+   }
+   public NegativeWithdrawException(double amount)
+   {
+      super("Error: Negative withdraw: " + amount);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m cat WithdrawExceedBalanceException.java
+public class WithdrawExceedBalanceException extends Exception{
+   public WithdrawExceedBalanceException()
+   {
+      super("Error: Withdraw exceeds balance");
+   }
+   public WithdrawExceedBalanceException(double amount)
+   {
+      super("Error: Withdraw exceeds balance: " + amount);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m cat BankAccount.java
+public class BankAccount
+{
+   private double balance;
+
+   public BankAccount()
+   {
+      balance = 0.0;
+   }
+   public BankAccount(double startBalance)
+                     throws NegativeStartingBalanceException
+   {
+      if (startBalance < 0)
+         throw new NegativeStartingBalanceException(startBalance);         
+      balance = startBalance;
+   }
+   public void setBalance(double b)
+   {
+      balance = b;
+   }
+   public double getBalance()
+   {
+      return balance;
+   }
+   public void deposit(double amount) throws NegativeDepositException
+   {
+      if (amount < 0)
+         throw new NegativeDepositException(amount);
+      balance += amount;
+   }
+   public void withdraw(double amount) throws NegativeWithdrawException, WithdrawExceedBalanceException
+   {
+      if (amount < 0)
+         throw new NegativeWithdrawException(amount);
+      else if (amount > balance)
+         throw new WithdrawExceedBalanceException(amount);
+      balance -= amount;
+   }
+   public String toString()
+   {
+      return "balance = $" + balance;
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m cat AccountTest.java
+public class AccountTest
+{
+   public static void main(String [] args)
+   {
+      for (int i=-100; i<=500; i+=200)
+      {
+         try
+         {
+            System.out.println();
+            BankAccount account = new BankAccount(i);
+            System.out.println("account created with " + account);
+
+            account.deposit(100);
+            System.out.println("after deposit $100,  " + account);
+
+            account.withdraw(300);
+            System.out.println("after withdraw $300, " + account);
+
+            if (i==300)
+               account.deposit(-10);
+
+            if (i==500)
+               account.withdraw(-20);
+         }
+         catch (NegativeStartingBalanceException e)
+         {
+            System.out.println(e.getMessage());
+         }
+         catch (NegativeDepositException e)
+         {
+            System.out.println(e.getMessage());
+         }
+         catch (NegativeWithdrawException e)
+         {
+            System.out.println(e.getMessage());
+         }
+         catch (WithdrawExceedBalanceException e)
+         {
+            System.out.println(e.getMessage());
+         }
+      }
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m javac AccountTest.java
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# An error report file with more information is saved as:
+# /user/tdvandenberg/cs1400/codingPractice/completePractice11/task1/hs_err_pid71550.log
+#
+# Can't open file to dump replay data. Error: Cannot allocate memory
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m javac AccountTest.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m java AccountTest
+
+Error: Negative starting balance: -100.0
+
+account created with balance = $100.0
+after deposit $100,  balance = $200.0
+Error: Withdraw exceeds balance: 300.0
+
+account created with balance = $300.0
+after deposit $100,  balance = $400.0
+after withdraw $300, balance = $100.0
+Error: Negative deposit: -10.0
+
+account created with balance = $500.0
+after deposit $100,  balance = $600.0
+after withdraw $300, balance = $300.0
+Error: Negative withdraw: -20.0
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task1[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task1 $[00m cd ..
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11 $[00m cd task2
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice/completePractice11/task2
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m ls -l
+total 12
+-rw------- 1 tdvandenberg cpp  521 May  7 17:51 InvalidMonthNameException.class
+-rw------- 1 tdvandenberg cpp  311 May  7 17:50 InvalidMonthNameException.java
+-rw------- 1 tdvandenberg cpp  575 May  7 17:51 InvalidMonthNumberException.class
+-rw------- 1 tdvandenberg cpp  318 May  7 17:50 InvalidMonthNumberException.java
+-rw------- 1 tdvandenberg cpp 1397 May  7 17:51 Month.class
+-rw------- 1 tdvandenberg cpp  985 May  7 17:51 Month.java
+-rw------- 1 tdvandenberg cpp  814 May  7 17:51 MonthTest.class
+-rw------- 1 tdvandenberg cpp  606 May  7 17:51 MonthTest.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m cat InvalidMonthNumberException.java
+public class InvalidMonthNumberException extends Exception{
+   public InvalidMonthNumberException()
+      {
+         super("Error - Invalid number for the given month: ");
+      }
+      public InvalidMonthNumberException(int num)
+      {
+         super("Error - Invalid number for the given month: " + num);
+      }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m cat InvalidMonthNameException.java
+public class InvalidMonthNameException extends Exception{
+   public InvalidMonthNameException()
+      {
+         super("Error - Invalid name for the given month: ");
+      }
+      public InvalidMonthNameException(String str)
+      {
+         super("Error - Invalid name for the given month: " + str);
+      }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m cat Month.java
+public class Month {
+   private int monthNum;
+   public Month(int m) throws InvalidMonthNumberException
+   {
+      if (m<1 || m>12)
+         throw new InvalidMonthNumberException(m);
+      monthNum=m;
+   }
+   public Month(String name) throws InvalidMonthNameException
+   {
+      name=name.toLowerCase();
+      String[] monthName={"january", "february", "march", "april", "may", "june",
+                          "july", "august", "september", "october", "november", "december"};
+      for(int i=0; i<monthName.length; i++)
+      {
+         if(monthName[i].equals(name))
+         {
+            monthNum=i+1;
+            return;
+         }
+      }
+      throw new InvalidMonthNameException(name);
+   }
+   public String toString()
+   {
+      String[] monthName={"January", "February", "March", "April", "May", "June",
+                          "July", "August", "September", "October", "November", "December"};
+      return "The month you just created is "+ monthName[monthNum-1];
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m cat MonthTest.java
+public class MonthTest {
+   public static void main(String[] args)
+   {
+      try{
+         Month m1 = new Month(10);
+         System.out.println(m1);
+         Month m2 = new Month(25);
+         System.out.println(m2);
+      }
+      catch (InvalidMonthNumberException e)
+      {
+         System.out.println(e.getMessage());
+      }
+      try{
+         Month m3=new Month("March");
+         System.out.println(m3);
+         Month m4=new Month("Septober");
+         System.out.println(m4);
+      }
+      catch (InvalidMonthNameException e)
+      {
+         System.out.println(e.getMessage());
+      }
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m javac MOnt[K[K[KonthTest.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m java MonthTest
+The month you just created is October
+Error - Invalid number for the given month: 25
+The month you just created is March
+Error - Invalid name for the given month: septober
+]0;tdvandenberg@costello:~/cs1400/codingPractice/completePractice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/completePractice11/task2 $[00m exit
+exit
+
+Script done on 2021-05-07 17:55:52-07:00 [COMMAND_EXIT_CODE="0"]
