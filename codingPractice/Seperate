@@ -1,0 +1,14 @@
+import java.util.Scanner;
+import java.io;
+public class Exam
+{
+   public static void main(String[] args)
+   {
+      Scanner keyboard = new Scanner(System.in);
+      PrintWriter outFile = new PrintWriter("odd.out");
+      PrintWriter outFile = new PrintWriter("even.out");
+      PrintWriter outFile = new PrintWriter("inputs.out");
+      System.out.print("enter output filename: ");
+      String filename = keyboard.nextLine();
+      PrintWriter outputfile = new PrintWriter(inputs.out);
+      
