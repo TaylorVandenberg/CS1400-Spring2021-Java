@@ -1,0 +1,122 @@
+Script started on 2021-05-14 21:12:01-07:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="119" LINES="64"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice/practice13
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m ls -l
+total 15
+-rw------- 1 tdvandenberg cpp  913 May 14 21:05 DisplayArray.class
+-rw------- 1 tdvandenberg cpp  366 May 14 21:04 DisplayArray.java
+-rw------- 1 tdvandenberg cpp 1258 May 14 21:11 PalindromeTest.class
+-rw------- 1 tdvandenberg cpp  833 May 14 21:10 PalindromeTest.java
+-rw------- 1 tdvandenberg cpp 1195 May 14 21:05 PrintDigits.class
+-rw------- 1 tdvandenberg cpp  625 May 14 20:27 PrintDigits.java
+-rw------- 1 tdvandenberg cpp    0 May 14 21:12 [0m[00;32mpractice13.txt[0m
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m cat Du[KisplayArray.java
+public class DisplayArray {
+   static int count=0;
+   public static void printArray(int[] x)
+   {
+      System.out.print(x[count]+" ");
+      if(x.length > count+1)
+      {
+         count+=1;
+         printArray(x);
+      }
+   }
+   public static void main(String [] args)
+   {
+      int[] a1 = {1,3,5,7,9};
+      printArray(a1);
+      System.out.println("");
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m javac DisplayArray.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m java DisplayArray
+1 3 5 7 9 
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m cat PrintDigits.java
+import java.util.Scanner;
+public class PrintDigits {
+   static int count=1;
+   static int revCount=0;
+   public static void printRightToLeft(Integer x)
+   {
+      String str = Integer.toString(x);
+      if (count<=str.length())
+      {
+         System.out.println(str.charAt(str.length()-count));
+         count+=1;
+         printRightToLeft(x);
+      }
+   }
+   public static void main(String [] args)
+   {
+      System.out.print("enter a positive integer: ");
+      Scanner kb = new Scanner(System.in);
+      Integer y = kb.nextInt();
+      System.out.println("print n right to left...");
+      printRightToLeft(y);
+
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m javac PrintDigits.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m java PrintDigits
+enter a positive integer: 12345
+print n right to left...
+5
+4
+3
+2
+1
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m cat Palindromet[KTest.java
+import java.util.Scanner;
+public class PalindromeTest {
+   static int count=0;
+   static int revCount;
+   public static boolean palindrome(String s)
+   {
+      revCount=s.length()-count-1;
+      String s2=s.toLowerCase();
+      if (count<s.length())
+      {
+         if(s2.charAt(count)==s2.charAt(revCount))
+         {
+            count+=1;
+            palindrome(s);
+         }
+         else if(s2.charAt(count)!=s2.charAt(revCount))
+         {
+         System.out.printf("'%s' not a palindrome.\n", s);
+         return false;
+         }
+      }
+      return true;
+   }
+   public static void main(String [] args)
+   {
+      System.out.print("enter a string: ");
+      Scanner kb = new Scanner(System.in);
+      String str = kb.nextLine();
+      if(palindrome(str))
+         System.out.printf("'%s' is a palindrome.\n",str);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m javac PalindromeTest.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m java Palindrome Test[K[K[K[K[KTest
+enter a string: 
+'' is a palindrome.
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m java PalindromeTest
+enter a string: kayak
+'kayak' is a palindrome.
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m java PalindromeTest
+enter a string: kayaak
+'kayaak' not a palindrome.
+'kayaak' is a palindrome.
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m java PalindromeTest
+enter a string: Desserts I S stressed
+'Desserts I stressed' is a palindrome.
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m java PalindromeTest
+enter a string: Desserts, I stressed.
+'Desserts, I stressed.' not a palindrome.
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice13[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice13 $[00m ext[Kit'[K
+exit
+
+Script done on 2021-05-14 21:13:46-07:00 [COMMAND_EXIT_CODE="0"]

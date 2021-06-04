@@ -1,0 +1,164 @@
+Script started on 2021-02-12 15:45:48-08:00 [TERM="xterm" TTY="/dev/pts/7" COLUMNS="117" LINES="30"]
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m ls -l
+total 18
+-rw------- 1 tdvandenberg cpp 1197 Feb 11 20:07 KeyboardInput.class
+-rw------- 1 tdvandenberg cpp  741 Feb 11 20:07 KeyboardInput.java
+-rw------- 1 tdvandenberg cpp 1104 Feb 12 14:48 NameAndInitials.class
+-rw------- 1 tdvandenberg cpp  893 Feb 12 14:48 NameAndInitials.java
+-rw------- 1 tdvandenberg cpp 1003 Feb  5 11:22 Pay.class
+-rw-r--r-- 1 tdvandenberg cpp  978 Feb  5 11:16 Pay.java
+-rw------- 1 tdvandenberg cpp 1098 Feb 12 15:27 VendingMachine.class
+-rw------- 1 tdvandenberg cpp  800 Feb 12 15:27 VendingMachine.java
+-rw------- 1 tdvandenberg cpp 2646 Feb  5 11:24 [0m[00;32mpractice1.txt[0m
+-rw------- 1 tdvandenberg cpp    0 Feb 12 15:45 [00;32mpractice2.txt[0m
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m cat KeyboardInput.java
+import java.util.Scanner;
+public class KeyboardInput
+{
+   public static void main(String[] args)
+   {
+      int age;
+      double annualSalary;
+      Scanner kb = new Scanner(System.in);
+
+      System.out.print("enter your name: ");
+      String name = kb.nextLine();
+
+      System.out.print("enter your age: ");
+      age = kb.nextInt();
+
+      kb.nextLine();
+
+      System.out.print("enter company name: ");
+      String company = kb.nextLine();
+
+      System.out.print("enter annual salary: ");
+      annualSalary = kb.nextDouble();
+
+      System.out.println("My name is " + name + ", my age is " + age + " and \nI hope to work for " 
+                                       + company + " and earn " + annualSalary + " per year.");
+   }
+}
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m javac KeyboardInput.java
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java KeyboardInput
+enter your name: Taylor Vandenberg
+enter your age: 20
+enter company name: CPP
+enter annual salary: 100000
+My name is Taylor Vandenberg, my age is 20 and 
+I hope to work for CPP and earn 100000.0 per year.
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m cat Namr[KeAndInitials.java
+public class NameAndInitials
+{
+   public static void main(String[] args)
+   {
+      String first = "Taylor";
+      String middle = "Dean";
+      String last = "Vandenberg";
+      char first_Initial = first.charAt(0);
+      char middle_Initial = middle.charAt(0);
+      char last_Initial = last.charAt(0);
+
+      System.out.println("Name = " + first + " " + middle + " " + last);
+
+      System.out.println("Initials = " + first_Initial 
+                         + middle_Initial + last_Initial);
+
+      System.out.println("Short name = " + first + " " 
+                         + middle_Initial + " " + last);
+
+      System.out.println("Shorter name = " + first_Initial 
+                         + " " + middle_Initial + " " + last);
+
+      System.out.println("UpperCase name = " + first.toUpperCase() + " " 
+                         + middle.toUpperCase() + " " + last.toUpperCase());
+
+   }
+}
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m javac NameAndInitials.java
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java NameAndInitials.java
+Error: Could not find or load main class NameAndInitials.java
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java NameAndInitials.java[K[K[K[K[K
+Name = Taylor Dean Vandenberg
+Initials = TDV
+Short name = Taylor D Vandenberg
+Shorter name = T D Vandenberg
+UpperCase name = TAYLOR DEAN VANDENBERG
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m cat VendingMachine.java
+import java.util.Scanner;
+public class VendingMachine
+{
+   public static void main(String[] args)
+   {
+      int price, total;
+      int quarter, dime, nickle;
+      Scanner kb = new Scanner(System.in);
+
+      System.out.print("Enter price of item from 25 cents to a dollar, in 5-cent increments\n");
+      
+      price = kb.nextInt();
+   
+      total = price;
+
+      quarter = (price / 25);
+      price = (price - (25 * quarter));
+
+      dime = (price / 10);
+      price = (price - (10 * dime));
+
+      nickle = (price / 5);
+
+      System.out.println("You bought an item for " + total
+                        + " cents and gave me a dollar, so your change is\n" 
+                        + quarter + " quarters,\n" + dime + " dimes, and\n" 
+                        + nickle + " nickles.\n");
+
+   }
+}
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m javac VendingMachine.java
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java VendingMachine
+Enter price of item from 25 cents to a dollar, in 5-cent increments
+25
+You bought an item for 25 cents and gave me a dollar, so your change is
+1 quarters,
+0 dimes, and
+0 nickles.
+
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java VendingMachinec VendingMachine.java[6P VendingMachine
+Enter price of item from 25 cents to a dollar, in 5-cent increments
+35
+You bought an item for 35 cents and gave me a dollar, so your change is
+1 quarters,
+1 dimes, and
+0 nickles.
+
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java VendingMachine
+Enter price of item from 25 cents to a dollar, in 5-cent increments
+45
+You bought an item for 45 cents and gave me a dollar, so your change is
+1 quarters,
+2 dimes, and
+0 nickles.
+
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java VendingMachine
+Enter price of item from 25 cents to a dollar, in 5-cent increments
+80
+You bought an item for 80 cents and gave me a dollar, so your change is
+3 quarters,
+0 dimes, and
+1 nickles.
+
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m java VendingMachine
+Enter price of item from 25 cents to a dollar, in 5-cent increments
+100
+You bought an item for 100 cents and gave me a dollar, so your change is
+4 quarters,
+0 dimes, and
+0 nickles.
+
+]0;tdvandenberg@abbott:~/cs1400/codingPractice[01;32mtdvandenberg@abbott[01;34m ~/cs1400/codingPractice $[00m exit
+exit
+
+Script done on 2021-02-12 15:50:19-08:00 [COMMAND_EXIT_CODE="0"]

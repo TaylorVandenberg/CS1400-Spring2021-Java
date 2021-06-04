@@ -1,0 +1,243 @@
+Script started on 2021-02-19 23:55:36-08:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="80" LINES="24"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m ls -l
+total 33
+-rw------- 1 tdvandenberg cpp  660 Feb 19 22:59 FormattedOutput.class
+-rw------- 1 tdvandenberg cpp  378 Feb 19 22:59 FormattedOutput.java
+-rw------- 1 tdvandenberg cpp 1197 Feb 12 15:46 KeyboardInput.class
+-rw------- 1 tdvandenberg cpp  741 Feb 11 20:07 KeyboardInput.java
+-rw------- 1 tdvandenberg cpp 1104 Feb 12 15:48 NameAndInitials.class
+-rw------- 1 tdvandenberg cpp  893 Feb 12 14:48 NameAndInitials.java
+-rw------- 1 tdvandenberg cpp 1003 Feb  5 11:22 Pay.class
+-rw-r--r-- 1 tdvandenberg cpp  978 Feb  5 11:16 Pay.java
+-rw------- 1 tdvandenberg cpp  640 Feb 19 23:05 StringComparison.class
+-rw------- 1 tdvandenberg cpp  666 Feb 19 23:53 StringComparison.java
+-rw------- 1 tdvandenberg cpp 1098 Feb 12 15:49 VendingMachine.class
+-rw------- 1 tdvandenberg cpp  800 Feb 12 15:27 VendingMachine.java
+-rw------- 1 tdvandenberg cpp 2646 Feb  5 11:24 [0m[00;32mpractice1.txt[0m
+-rw------- 1 tdvandenberg cpp 7204 Feb 12 15:50 [00;32mpractice2.txt[0m
+-rw------- 1 tdvandenberg cpp    0 Feb 19 23:55 [00;32mpractice3.txt[0m
+-rw------- 1 tdvandenberg cpp  555 Feb 19 23:49 roots.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat FormattedOutput.java
+public class FormattedOutput
+{
+   public static void main(String[] args)
+   {
+      String name = "\"Taylor Vandenberg";
+      String major = "\\Computer Science";
+      String study_List = "CS '1400'";
+
+      System.out.printf("Student:    %12s\" \n",name);
+      System.out.printf("Major:      %12s\\ \n", major);
+      System.out.printf("Study List: %s", study_List);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac FormattedOutput.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java FormattedOutput
+Student:    "Taylor Vandenberg" 
+Major:      \Computer Science\ 
+Study List: CS '1400']0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat StringComparison.java
+import java.util.Scanner;
+public class StringComparison
+{
+   public static void main(String[] args)
+   public static ArrayList<String>
+   {
+      Scanner kb = new Scanner(System.in);
+      System.out.println("Please enter "
+                     + "three strings: ");
+
+      String s1 = kb.nextLine();
+      String s2 = kb.nextLine();
+      String s3 = kb.nextLine();
+      
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+{
+   System.out.println(s1 + s2 + s3);
+ }
+else
+{ if (s2.compareTo(s1)<0) && (s1.compareTo(s3)<0)
+ {
+  System.out.println(s2 + s1 + s3);
+}
+else
+{ if (s3.compareTo(s2)<0) && (s2.compareTo(s1)<0)
+{ 
+System.out.println(s3 + s2 + s1);
+}
+}
+     
+}
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac StringComparison.java
+StringComparison.java:4: error: ';' expected
+   public static void main(String[] args)
+                                         ^
+StringComparison.java:5: error: <identifier> expected
+   public static ArrayList<String>
+                                  ^
+StringComparison.java:8: error: <identifier> expected
+      System.out.println("Please enter "
+                        ^
+StringComparison.java:8: error: illegal start of type
+      System.out.println("Please enter "
+                         ^
+StringComparison.java:8: error: ')' expected
+      System.out.println("Please enter "
+                                        ^
+StringComparison.java:9: error: ';' expected
+                     + "three strings: ");
+                      ^
+StringComparison.java:9: error: illegal start of type
+                     + "three strings: ");
+                                        ^
+StringComparison.java:9: error: <identifier> expected
+                     + "three strings: ");
+                                         ^
+StringComparison.java:9: error: ';' expected
+                     + "three strings: ");
+                                          ^
+StringComparison.java:11: error: <identifier> expected
+      String s1 = kb.nextLine();
+               ^
+StringComparison.java:15: error: illegal start of type
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+^
+StringComparison.java:15: error: <identifier> expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                ^
+StringComparison.java:15: error: ';' expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                 ^
+StringComparison.java:15: error: illegal start of type
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                   ^
+StringComparison.java:15: error: <identifier> expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                    ^
+StringComparison.java:15: error: ';' expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                     ^
+StringComparison.java:15: error: illegal start of type
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                      ^
+StringComparison.java:15: error: <identifier> expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                       ^
+StringComparison.java:15: error: <identifier> expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                                        ^
+StringComparison.java:15: error: ';' expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                                         ^
+StringComparison.java:15: error: illegal start of type
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                                           ^
+StringComparison.java:15: error: <identifier> expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                                            ^
+StringComparison.java:15: error: ';' expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                                             ^
+StringComparison.java:15: error: illegal start of type
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                                              ^
+StringComparison.java:15: error: <identifier> expected
+if (s1.compareTo(s2)<0) && (s2.compareTo(s3)<0)
+                                               ^
+StringComparison.java:16: error: ';' expected
+{
+ ^
+StringComparison.java:17: error: illegal start of type
+   System.out.println(s1 + s2 + s3);
+         ^
+StringComparison.java:17: error: ';' expected
+   System.out.println(s1 + s2 + s3);
+             ^
+StringComparison.java:17: error: invalid method declaration; return type required
+   System.out.println(s1 + s2 + s3);
+              ^
+StringComparison.java:17: error: <identifier> expected
+   System.out.println(s1 + s2 + s3);
+                        ^
+StringComparison.java:17: error: ';' expected
+   System.out.println(s1 + s2 + s3);
+                          ^
+StringComparison.java:17: error: illegal start of type
+   System.out.println(s1 + s2 + s3);
+                              ^
+StringComparison.java:17: error: ';' expected
+   System.out.println(s1 + s2 + s3);
+                                  ^
+StringComparison.java:19: error: class, interface, or enum expected
+else
+^
+StringComparison.java:23: error: class, interface, or enum expected
+}
+^
+StringComparison.java:28: error: class, interface, or enum expected
+}
+^
+36 errors
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat roots.java
+import java.util.Scanner;
+public class roots
+{
+   public static void main(String[] args)
+   {
+      float n1, n2, n3;
+      float r1, r2, r3;
+
+      Scanner kb = new Scanner(System.in);
+      System.out.println("enter three coefficients: ");
+      n1 = kb.nextFloat();
+      kb.nextLine();
+      n2 = kb.nextFloat();
+      kb.nextLine();
+      n3 = kb.nextFloat();
+      kb.nextLine();
+
+      r1 = (-n2 + (n2^2 - 4*n1*n3)^.5)/(2*n1);
+      r2 = (-n2 - (n^2 - 4*n1*n3)^.5)/(2*n1);
+
+      System.out.println("The two roots are %.4f %.4f", r1, r2);
+     }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac String[K[K[K[K[K[Kroots.java
+roots.java:18: error: bad operand types for binary operator '^'
+      r1 = (-n2 + (n2^2 - 4*n1*n3)^.5)/(2*n1);
+                     ^
+  first type:  float
+  second type: float
+roots.java:19: error: cannot find symbol
+      r2 = (-n2 - (n^2 - 4*n1*n3)^.5)/(2*n1);
+                   ^
+  symbol:   variable n
+  location: class roots
+roots.java:21: error: no suitable method found for println(String,float,float)
+      System.out.println("The two roots are %.4f %.4f", r1, r2);
+                ^
+    method PrintStream.println() is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(boolean) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(char) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(int) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(long) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(float) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(double) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(char[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(String) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(Object) is not applicable
+      (actual and formal argument lists differ in length)
+3 errors
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m exit
+exit
+
+Script done on 2021-02-19 23:56:55-08:00 [COMMAND_EXIT_CODE="1"]

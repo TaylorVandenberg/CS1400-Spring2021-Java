@@ -1,0 +1,126 @@
+Script started on 2021-02-26 23:20:00-08:00 [TERM="xterm-256color" TTY="/dev/pts/65" COLUMNS="119" LINES="64"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m ls -l
+total 53
+-rw------- 1 tdvandenberg cpp  1031 Feb 26 22:21 Exam.class
+-rw------- 1 tdvandenberg cpp   613 Feb 26 22:03 Exam.java
+-rw------- 1 tdvandenberg cpp   660 Feb 19 23:56 FormattedOutput.class
+-rw------- 1 tdvandenberg cpp   378 Feb 19 22:59 FormattedOutput.java
+-rw------- 1 tdvandenberg cpp   287 Feb 26 22:38 HollowSquare.java
+-rw------- 1 tdvandenberg cpp  1197 Feb 12 15:46 KeyboardInput.class
+-rw------- 1 tdvandenberg cpp   741 Feb 11 20:07 KeyboardInput.java
+-rw------- 1 tdvandenberg cpp  1104 Feb 12 15:48 NameAndInitials.class
+-rw------- 1 tdvandenberg cpp   893 Feb 12 14:48 NameAndInitials.java
+-rw------- 1 tdvandenberg cpp   721 Feb 26 22:28 Pattern.class
+-rw------- 1 tdvandenberg cpp   224 Feb 26 22:28 Pattern.java
+-rw------- 1 tdvandenberg cpp  1003 Feb  5 11:22 Pay.class
+-rw-r--r-- 1 tdvandenberg cpp   978 Feb  5 11:16 Pay.java
+-rw------- 1 tdvandenberg cpp   493 Feb 26 23:19 Seperate
+-rw------- 1 tdvandenberg cpp   166 Feb 26 22:52 SeperateEvenOddNumbers
+-rw------- 1 tdvandenberg cpp   640 Feb 19 23:05 StringComparison.class
+-rw------- 1 tdvandenberg cpp   666 Feb 19 23:53 StringComparison.java
+-rw------- 1 tdvandenberg cpp  1098 Feb 12 15:49 VendingMachine.class
+-rw------- 1 tdvandenberg cpp   800 Feb 12 15:27 VendingMachine.java
+-rw------- 1 tdvandenberg cpp  2646 Feb  5 11:24 [0m[00;32mpractice1.txt[0m
+-rw------- 1 tdvandenberg cpp  7204 Feb 12 15:50 [00;32mpractice2.txt[0m
+-rw------- 1 tdvandenberg cpp 10440 Feb 19 23:56 [00;32mpractice3.txt[0m
+-rw------- 1 tdvandenberg cpp     0 Feb 26 23:20 [00;32mpractice4.txt[0m
+-rw------- 1 tdvandenberg cpp   555 Feb 19 23:49 roots.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac Exam.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java Exam
+enter result (1=pass, 0=fail): 1
+enter result (1=pass, 0=fail): 1
+enter result (1=pass, 0=fail): 1
+enter result (1=pass, 0=fail): 0
+enter result (1=pass, 0=fail): 0
+enter result (1=pass, 0=fail): 1
+enter result (1=pass, 0=fail): 1
+enter result (1=pass, 0=fail): 1
+enter result (1=pass, 0=fail): 1
+enter result (1=pass, 0=fail): 1
+8 passed
+2 failed
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat Exam.java
+import java.util.Scanner;
+public class Exam
+{
+   public static void main(String[] args)
+   {
+      Scanner keyboard = new Scanner(System.in);
+      int passes=0, failures=0, students=0, result;
+      for (students=0; students<10; students++ )
+      {
+      System.out.print("enter result (1=pass, 0=fail): ");
+      result = keyboard.nextInt();
+      //add your code here for input validation
+      if (result==1)
+         passes++;
+      else
+         failures++;
+    }
+    System.out.println(passes + " passed\n"
+    + failures + " failed");
+    if (passes < 5)
+    System.out.println("Raise tuition");
+   }
+}
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat Pattern.java
+public class Pattern
+{
+   public static void main(String[] args)
+   {
+      for (int i=6; i>=1; i--)
+      {
+         for (int j=1; j<=i; j++)
+         System.out.print(j+" " );
+         System.out.println();
+      }
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac Pattern.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java Pattern.java
+Error: Could not find or load main class Pattern.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java Pattern.java\[K[K[K[K[K[K
+1 2 3 4 5 6 
+1 2 3 4 5 
+1 2 3 4 
+1 2 3 
+1 2 
+1 
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat HollowSquare.java
+//I am not super sure how to tackle the main part of this one but I will be seeing some friends this weekend that 
+I am going to ask for help
+
+import java.util.Scanner;
+public class Exam
+{
+   public static void main(String[] args)
+   {
+       Scanner keyboard = new Scanner(System.in);
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat SeperateEvenOddNumbers.java
+cat: SeperateEvenOddNumbers.java: No such file or directory
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat SeperateEvenOddNumbers.java[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KEven.java
+cat: Even.java: No such file or directory
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m ls
+Exam.class             KeyboardInput.class    Pattern.java            StringComparison.class  [0m[00;32mpractice2.txt[0m
+Exam.java              KeyboardInput.java     Pay.class               StringComparison.java   [00;32mpractice3.txt[0m
+FormattedOutput.class  NameAndInitials.class  Pay.java                VendingMachine.class    [00;32mpractice4.txt[0m
+FormattedOutput.java   NameAndInitials.java   Seperate                VendingMachine.java     roots.java
+HollowSquare.java      Pattern.class          SeperateEvenOddNumbers  [00;32mpractice1.txt[0m
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat SeperateEvenOddNumbers.java
+cat: SeperateEvenOddNumbers.java: No such file or directory
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat SeperateEvenOddNumbers.java[K[K[K[K[K
+import java.util.Scanner;
+public class SeperateEenOddNumbers
+{
+   public static void main(String[] args)
+   {
+      Scanner keyboard = new Scanner(System.in);
+      
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m exit
+exit
+
+Script done on 2021-02-26 23:22:17-08:00 [COMMAND_EXIT_CODE="0"]

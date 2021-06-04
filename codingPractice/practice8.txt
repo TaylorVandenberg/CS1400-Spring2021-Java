@@ -1,0 +1,394 @@
+Script started on 2021-04-09 23:48:11-07:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="119" LINES="64"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m ls -l
+total 1616
+-rw------- 1 tdvandenberg cpp    910 Apr  9 23:47 BinarySearch.java
+-rw------- 1 tdvandenberg cpp   1354 Apr  9 21:36 [0m[00;32mBoyNames.txt[0m
+-rw------- 1 tdvandenberg cpp    870 Mar 12 22:54 Car.class
+-rw------- 1 tdvandenberg cpp    665 Mar 12 22:54 Car.java
+-rw------- 1 tdvandenberg cpp   1184 Mar 12 23:56 CarTest.class
+-rw------- 1 tdvandenberg cpp    890 Mar 12 23:00 CarTest.java
+-rw------- 1 tdvandenberg cpp    897 Mar 19 23:21 CarpetCalculator.class
+-rw------- 1 tdvandenberg cpp    598 Mar 19 23:06 CarpetCalculator.java
+-rw------- 1 tdvandenberg cpp   1031 Feb 26 23:20 Exam.class
+-rw------- 1 tdvandenberg cpp    613 Feb 26 22:03 Exam.java
+-rw------- 1 tdvandenberg cpp    660 Feb 19 23:56 FormattedOutput.class
+-rw------- 1 tdvandenberg cpp    378 Feb 19 22:59 FormattedOutput.java
+-rw------- 1 tdvandenberg cpp   3378 Mar  5 23:54 Geometry.class
+-rw-r--r-- 1 tdvandenberg cpp   6016 Mar  5 21:23 Geometry.java
+-rw------- 1 tdvandenberg cpp   1445 Apr  9 21:37 [00;32mGirlNames.txt[0m
+-rw------- 1 tdvandenberg cpp    287 Feb 26 22:38 HollowSquare.java
+-rw------- 1 tdvandenberg cpp    820 Mar 19 22:43 HotDogStand.class
+-rw------- 1 tdvandenberg cpp    498 Mar 19 22:43 HotDogStand.java
+-rw------- 1 tdvandenberg cpp   1217 Mar 19 23:20 HotDogStandTest.class
+-rw------- 1 tdvandenberg cpp   1170 Mar 19 22:52 HotDogStandTest.java
+-rw------- 1 tdvandenberg cpp   1197 Feb 12 15:46 KeyboardInput.class
+-rw------- 1 tdvandenberg cpp    741 Feb 11 20:07 KeyboardInput.java
+-rw------- 1 tdvandenberg cpp   1967 Apr  9 17:02 Lottery.class
+-rw------- 1 tdvandenberg cpp   2108 Apr  9 17:02 Lottery.java
+-rw------- 1 tdvandenberg cpp   1104 Feb 12 15:48 NameAndInitials.class
+-rw------- 1 tdvandenberg cpp    893 Feb 12 14:48 NameAndInitials.java
+-rw------- 1 tdvandenberg cpp   2016 Apr  9 23:00 NameSearch.class
+-rw------- 1 tdvandenberg cpp   1835 Apr  9 23:13 NameSearch.java
+-rw------- 1 tdvandenberg cpp    721 Feb 26 23:21 Pattern.class
+-rw------- 1 tdvandenberg cpp    224 Feb 26 22:28 Pattern.java
+-rw------- 1 tdvandenberg cpp   1003 Feb  5 11:22 Pay.class
+-rw-r--r-- 1 tdvandenberg cpp    978 Feb  5 11:16 Pay.java
+-rw------- 1 tdvandenberg cpp  17032 Mar  5 23:56 [00;32mPractice5.txt[0m
+-rw------- 1 tdvandenberg cpp      0 Mar  6 00:01 [00;32mPractice5p2.txt[0m
+-rw------- 1 tdvandenberg cpp    911 Mar  6 00:01 PrimeChecker.class
+-rw------- 1 tdvandenberg cpp    825 Mar  6 00:00 PrimeChecker.java
+-rw------- 1 tdvandenberg cpp    893 Mar 19 23:19 RoomCarpet.class
+-rw------- 1 tdvandenberg cpp    521 Mar 19 23:19 RoomCarpet.java
+-rw------- 1 tdvandenberg cpp    745 Mar 19 23:18 RoomDimension.class
+-rw------- 1 tdvandenberg cpp    467 Mar 19 23:17 RoomDimension.java
+-rw------- 1 tdvandenberg cpp    709 Mar 12 23:26 SavingsAccount.class
+-rw------- 1 tdvandenberg cpp    719 Mar 12 23:34 SavingsAccount.java
+-rw------- 1 tdvandenberg cpp   1509 Mar 12 23:54 SavingsAccountTest.java
+-rw------- 1 tdvandenberg cpp   1662 Apr  9 23:37 SelectionSort.class
+-rw------- 1 tdvandenberg cpp   1499 Apr  9 23:37 SelectionSort.java
+-rw------- 1 tdvandenberg cpp    493 Feb 26 23:19 Seperate
+-rw------- 1 tdvandenberg cpp    166 Feb 26 22:52 SeperateEvenOddNumbers
+-rw------- 1 tdvandenberg cpp    640 Feb 19 23:05 StringComparison.class
+-rw------- 1 tdvandenberg cpp    666 Feb 19 23:53 StringComparison.java
+-rw------- 1 tdvandenberg cpp   1267 Mar  5 23:53 StringComparisonWithWildCard.java
+-rw------- 1 tdvandenberg cpp   1098 Feb 12 15:49 VendingMachine.class
+-rw------- 1 tdvandenberg cpp    800 Feb 12 15:27 VendingMachine.java
+-rw------- 1 tdvandenberg cpp    123 Apr  9 23:37 data.out
+-rw------- 1 tdvandenberg cpp     75 Apr  9 23:28 [00;32mdata.txt[0m
+-rw-r--r-- 1 tdvandenberg cpp  47285 Mar  5 21:22 [00;32mhs_err_pid102948.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46609 Apr  9 21:36 [00;32mhs_err_pid10640.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47755 Mar  5 22:00 [00;32mhs_err_pid120064.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47226 Apr  9 21:47 [00;32mhs_err_pid13834.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46896 Apr  9 21:51 [00;32mhs_err_pid15098.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46353 Mar  5 23:16 [00;32mhs_err_pid18666.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47030 Apr  9 21:13 [00;32mhs_err_pid24415.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47076 Mar  5 23:37 [00;32mhs_err_pid27983.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47300 Mar  5 23:49 [00;32mhs_err_pid33237.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47282 Mar  5 23:51 [00;32mhs_err_pid34690.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46940 Mar  5 23:54 [00;32mhs_err_pid35599.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46951 Mar  6 00:00 [00;32mhs_err_pid37253.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47310 Mar  5 22:50 [00;32mhs_err_pid7190.log[0m
+-rw------- 1 tdvandenberg cpp   2646 Feb  5 11:24 [00;32mpractice1.txt[0m
+-rw------- 1 tdvandenberg cpp   7204 Feb 12 15:50 [00;32mpractice2.txt[0m
+-rw------- 1 tdvandenberg cpp  10440 Feb 19 23:56 [00;32mpractice3.txt[0m
+-rw------- 1 tdvandenberg cpp   6791 Feb 26 23:22 [00;32mpractice4.txt[0m
+-rw------- 1 tdvandenberg cpp  10301 Mar 12 23:56 [00;32mpractice6.txt[0m
+-rw------- 1 tdvandenberg cpp  11223 Mar 19 23:21 [00;32mpractice7.txt[0m
+-rw------- 1 tdvandenberg cpp      0 Apr  9 23:48 [00;32mpractice8.txt[0m
+-rw-r--r-- 1 tdvandenberg cpp 211685 Mar  5 21:22 [00;32mreplay_pid102948.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:36 [00;32mreplay_pid10640.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 212148 Mar  5 22:00 [00;32mreplay_pid120064.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:47 [00;32mreplay_pid13834.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:51 [00;32mreplay_pid15098.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 23:16 [00;32mreplay_pid18666.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:13 [00;32mreplay_pid24415.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  32001 Mar  5 23:37 [00;32mreplay_pid27983.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  31550 Mar  5 23:49 [00;32mreplay_pid33237.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 211313 Mar  5 23:51 [00;32mreplay_pid34690.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 23:54 [00;32mreplay_pid35599.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  6 00:00 [00;32mreplay_pid37253.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 22:50 [00;32mreplay_pid7190.log[0m
+-rw------- 1 tdvandenberg cpp    555 Feb 19 23:49 roots.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat Lottery.java
+import java.util.Random;
+import java.util.Scanner;
+public class Lottery
+{
+   public static void main(String[] args)
+   {
+      Scanner kb = new Scanner(System.in);
+      System.out.println("welcome to play Lottery..."
+                        +"\n1. enter your own lottery number"
+                        +"\n2. get a computer-generated lottery"
+                        +" number");
+      System.out.print("your choice: ");
+      int choice = kb.nextInt();
+      kb.nextLine();
+
+      if(choice == 1)
+      {
+         int[] lotteryNumbers = generateLotteryNumber();
+         int[] pickedNumbers = new int[5];
+         for(int i = 0; i< pickedNumbers.length; i++)
+            {
+               pickedNumbers[i] = kb.nextInt();
+            }
+         printResult(lotteryNumbers, pickedNumbers);
+         
+      }
+      else if(choice == 2)
+      {
+         int[] lotteryNumbers = generateLotteryNumber();
+         int[] pickedNumbers = generateLotteryNumber();
+         printResult(lotteryNumbers, pickedNumbers);
+      }
+      else
+      {
+         System.out.println("This choice is invalid");
+         System.exit(0);
+      }
+   }
+   public static int[] generateLotteryNumber()
+   {
+      int[] a = new int[5];
+      Random random = new Random();
+      for (int i=0; i < a.length; i++)
+      {
+         a[i] = random.nextInt(10);
+      }
+      return a;
+   }
+   public static int compareNumbers(int[] lottery, int[] picks)
+   {
+      int count = 0;
+      for(int i=0; i<lottery.length; i++)
+      {
+         if(lottery[i] == picks[i])
+         {
+            count++;
+         }
+      }
+      return count;
+   }
+   public static void printResult(int[] lottery, int[] picks)
+   {
+      int count = compareNumbers(lottery, picks);
+      System.out.println("\nThe Lottery Number is:");
+      printArray(lottery);
+      System.out.println("Your Number is:");
+      printArray(picks);
+      System.out.println("There are "+count+" matching digits.");
+   }
+   public static void printArray(int[] a)
+   {
+      for (int i=0; i<a.length; i++)
+         System.out.print(a[i] + "  ");
+      System.out.println();
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac Lottery.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java Lottery
+welcome to play Lottery...
+1. enter your own lottery number
+2. get a computer-generated lottery number
+your choice: 2
+
+The Lottery Number is:
+9  1  3  5  1  
+Your Number is:
+3  8  7  5  0  
+There are 1 matching digits.
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java Lottery
+welcome to play Lottery...
+1. enter your own lottery number
+2. get a computer-generated lottery number
+your choice: 1
+3 4 5 6 7
+
+The Lottery Number is:
+1  6  5  8  1  
+Your Number is:
+3  4  5  6  7  
+There are 1 matching digits.
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat NameSearch.jaav[K[Kva
+import java.io.*;
+import java.util.*;
+public class NameSearch
+{
+   public static void main(String[] args) throws IOException
+   {
+      Scanner kb = new Scanner(System.in);
+      String answer = "yeeeeah";
+      String[] boyNamesArr = new String[200];
+      String[] girlNamesArr = new String[200];
+      getNamesFromFile(boyNamesArr, "BoyNames.txt");
+      getNamesFromFile(girlNamesArr, "GirlNames.txt");
+      while(!answer.equals(""))
+      {
+         System.out.print("Enter a name (blank line to stop): ");
+         answer = kb.nextLine();
+         if(!answer.equals(""))
+         {
+            displaySearchResult(answer, boyNamesArr, girlNamesArr);
+         }
+         else{
+            System.exit(0);
+         }
+      }
+   }
+   public static void getNamesFromFile(String[] array, String filename) 
+throws IOException
+   {
+      File file = new File(filename);
+      Scanner s = new Scanner(file);
+      int i = 0;
+      while (s.hasNext())
+      {
+         array[i] = s.nextLine();
+         i++;
+      }
+      s.close();
+   }
+   public static int sequentialSearch(String[] array, String value)
+   {
+      for (int i=0; i<array.length; i++)
+      {
+         if (array[i].toLowerCase()==value.toLowerCase())
+         {
+            return i;
+         }
+         else
+         {
+            i= -1;
+         }
+      }
+      return i;
+   }
+   public static void displaySearchResult(String input, String[] array1, String[] array2)
+   {
+      int boy = sequentialSearch(array1, input);
+      int girl = sequentialSearch(array2, input);
+      if(boy>=0)
+      {
+         System.out.println(input+" is a popular boy's name.");
+      }
+      else if(girl>=0)
+      {
+         System.out.println(input+" is a popular girl's name.");
+      }
+      else
+      {
+         System.out.println(input+" is not a popular name.");
+      }
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac NameSearch.java
+NameSearch.java:52: error: cannot find symbol
+      return i;
+             ^
+  symbol:   variable i
+  location: class NameSearch
+1 error
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat SelectionSort.java
+import java.io.*;
+import java.util.*;
+public class SelectionSort {
+   public static void main(String[] args) throws IOException
+   {
+      final int SIZE = 100;
+      int[] myArray = new int[SIZE];
+      int counter = 0;
+      File file = new File("data.txt");
+      Scanner s = new Scanner(file);
+      if(!file.exists())
+      {
+         System.out.println("file not found");
+         System.exit(0);
+      }
+      while (s.hasNext() && counter < myArray.length)
+      {
+         myArray[counter] = s.nextInt();
+         counter++;
+      }
+      s.close();
+      selectionSort(myArray, counter);
+      outputData(myArray, counter);
+      for(int i=0; i<counter; i++)
+      {
+         System.out.printf("%4d",myArray[i]);
+      }
+   }
+   public static void selectionSort(int[] array, int counter)
+   {
+      int minIndex, temp;
+
+      for (int i = 0; i < (counter-1); i++)
+      {
+         minIndex = i;
+         for(int j = i+1; j < counter; j++)
+         {
+            if (array[j] < array[minIndex])
+               minIndex = j;
+         }
+         temp = array[i];
+         array[i] = array[minIndex];
+         array[minIndex] = temp;
+      }
+   }
+   public static void outputData(int[] array, int counter) throws IOException
+   {
+      PrintWriter outputFile = new PrintWriter("data.out");
+      for (int i = 0; i < counter; i++)
+      {
+         if (i % 10 == 0)
+               outputFile.println();
+            outputFile.printf("%4d\t", array[i]);
+      }
+      outputFile.close();
+   }
+}
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac SelectionSort.java
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+[thread 140599603992128 also had an error]
+[thread 140599605044800 also had an error]
+[thread 140599601886784 also had an error]
+# An error report file with more information is saved as:
+# /user/tdvandenberg/cs1400/codingPractice/hs_err_pid46296.log
+#
+# Can't open file to dump replay data. Error: Cannot allocate memory
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac SelectionSort.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java SelectionSort
+-200 -11  -9  -5  -1   0   2   4   8  22  28  29  34  45  61  62  63  64  65  88  99 100 2001000]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat BinarySearch.java
+import java.util.*;
+import java.io.*;
+public class BinarySearch {
+   public static void main(String[] args) throws IOException
+   {
+      Scanner kb = new Scanner(System.in);
+      System.out.print("enter a number: ");
+      int userNum = kb.nextInt();
+      int[] myArray = {15,20,25,30,25,40};
+      int position = binarySearch(myArray, userNum);
+      if (position < 0)
+         System.out.println(userNum + " is not in the array");
+      else
+         System.out.println(userNum + " is at position " + position);
+   }
+   public static int binarySearch(int[] a, int target)
+   {
+      int first = 0,
+          last = a.length - 1,
+          mid;
+      while (first <= last)
+      {
+         mid = (first + last) / 2;
+         if (target == a[mid])
+            return mid;
+         if (target < a[mid])
+            last = mid - 1;
+         else 
+            first = mid + 1;
+      }
+      return -1;
+   }
+}
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac BinarySearch.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java BinarySearch
+enter a number: 10
+10 is not in the array
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java BinarySearch
+enter a number: 15
+15 is at position 0
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java BinarySearch
+enter a number: 20
+20 is at position 1
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m exit
+exit
+
+Script done on 2021-04-09 23:50:36-07:00 [COMMAND_EXIT_CODE="0"]

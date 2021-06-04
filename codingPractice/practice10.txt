@@ -1,0 +1,315 @@
+Script started on 2021-04-23 23:02:48-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="119" LINES="64"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m ls -l
+total 1775
+-rw------- 1 tdvandenberg cpp   1272 Apr  9 23:50 BinarySearch.class
+-rw------- 1 tdvandenberg cpp    910 Apr  9 23:47 BinarySearch.java
+-rw------- 1 tdvandenberg cpp   1354 Apr  9 21:36 [0m[00;32mBoyNames.txt[0m
+-rw------- 1 tdvandenberg cpp    870 Mar 12 22:54 Car.class
+-rw------- 1 tdvandenberg cpp    665 Mar 12 22:54 Car.java
+-rw------- 1 tdvandenberg cpp   1184 Mar 12 23:56 CarTest.class
+-rw------- 1 tdvandenberg cpp    890 Mar 12 23:00 CarTest.java
+-rw------- 1 tdvandenberg cpp    897 Mar 19 23:21 CarpetCalculator.class
+-rw------- 1 tdvandenberg cpp    598 Mar 19 23:06 CarpetCalculator.java
+-rw------- 1 tdvandenberg cpp   1031 Feb 26 23:20 Exam.class
+-rw------- 1 tdvandenberg cpp    613 Feb 26 22:03 Exam.java
+-rw------- 1 tdvandenberg cpp    660 Feb 19 23:56 FormattedOutput.class
+-rw------- 1 tdvandenberg cpp    378 Feb 19 22:59 FormattedOutput.java
+-rw------- 1 tdvandenberg cpp   3378 Mar  5 23:54 Geometry.class
+-rw-r--r-- 1 tdvandenberg cpp   6016 Mar  5 21:23 Geometry.java
+-rw------- 1 tdvandenberg cpp   1445 Apr  9 21:37 [00;32mGirlNames.txt[0m
+-rw------- 1 tdvandenberg cpp    287 Feb 26 22:38 HollowSquare.java
+-rw------- 1 tdvandenberg cpp    820 Mar 19 22:43 HotDogStand.class
+-rw------- 1 tdvandenberg cpp    498 Mar 19 22:43 HotDogStand.java
+-rw------- 1 tdvandenberg cpp   1217 Mar 19 23:20 HotDogStandTest.class
+-rw------- 1 tdvandenberg cpp   1170 Mar 19 22:52 HotDogStandTest.java
+-rw------- 1 tdvandenberg cpp   1197 Feb 12 15:46 KeyboardInput.class
+-rw------- 1 tdvandenberg cpp    741 Feb 11 20:07 KeyboardInput.java
+-rw------- 1 tdvandenberg cpp   1967 Apr  9 23:48 Lottery.class
+-rw------- 1 tdvandenberg cpp   2108 Apr  9 17:02 Lottery.java
+-rw------- 1 tdvandenberg cpp   1104 Feb 12 15:48 NameAndInitials.class
+-rw------- 1 tdvandenberg cpp    893 Feb 12 14:48 NameAndInitials.java
+-rw------- 1 tdvandenberg cpp   2016 Apr  9 23:00 NameSearch.class
+-rw------- 1 tdvandenberg cpp   1835 Apr  9 23:13 NameSearch.java
+-rw------- 1 tdvandenberg cpp    654 Apr 23 22:56 PasswordTest.class
+-rw------- 1 tdvandenberg cpp    271 Apr 23 22:54 PasswordTest.java
+-rw------- 1 tdvandenberg cpp   1229 Apr 23 22:56 PasswordVerifier.class
+-rw------- 1 tdvandenberg cpp   1146 Apr 23 22:55 PasswordVerifier.java
+-rw------- 1 tdvandenberg cpp    721 Feb 26 23:21 Pattern.class
+-rw------- 1 tdvandenberg cpp    224 Feb 26 22:28 Pattern.java
+-rw------- 1 tdvandenberg cpp   1003 Feb  5 11:22 Pay.class
+-rw-r--r-- 1 tdvandenberg cpp    978 Feb  5 11:16 Pay.java
+-rw------- 1 tdvandenberg cpp    584 Apr 16 23:15 PhoneBookEntry.class
+-rw------- 1 tdvandenberg cpp    276 Apr 16 23:15 PhoneBookEntry.java
+-rw------- 1 tdvandenberg cpp   1530 Apr 16 23:22 PhoneBookTest.class
+-rw------- 1 tdvandenberg cpp   1185 Apr 16 23:18 PhoneBookTest.java
+-rw------- 1 tdvandenberg cpp  17032 Mar  5 23:56 [00;32mPractice5.txt[0m
+-rw------- 1 tdvandenberg cpp      0 Mar  6 00:01 [00;32mPractice5p2.txt[0m
+-rw------- 1 tdvandenberg cpp    911 Mar  6 00:01 PrimeChecker.class
+-rw------- 1 tdvandenberg cpp    825 Mar  6 00:00 PrimeChecker.java
+-rw------- 1 tdvandenberg cpp    893 Mar 19 23:19 RoomCarpet.class
+-rw------- 1 tdvandenberg cpp    521 Mar 19 23:19 RoomCarpet.java
+-rw------- 1 tdvandenberg cpp    745 Mar 19 23:18 RoomDimension.class
+-rw------- 1 tdvandenberg cpp    467 Mar 19 23:17 RoomDimension.java
+-rw------- 1 tdvandenberg cpp    709 Mar 12 23:26 SavingsAccount.class
+-rw------- 1 tdvandenberg cpp    719 Mar 12 23:34 SavingsAccount.java
+-rw------- 1 tdvandenberg cpp   1509 Mar 12 23:54 SavingsAccountTest.java
+-rw------- 1 tdvandenberg cpp   1662 Apr  9 23:49 SelectionSort.class
+-rw------- 1 tdvandenberg cpp   1499 Apr  9 23:37 SelectionSort.java
+-rw------- 1 tdvandenberg cpp    493 Feb 26 23:19 Seperate
+-rw------- 1 tdvandenberg cpp    166 Feb 26 22:52 SeperateEvenOddNumbers
+-rw------- 1 tdvandenberg cpp    640 Feb 19 23:05 StringComparison.class
+-rw------- 1 tdvandenberg cpp    666 Feb 19 23:53 StringComparison.java
+-rw------- 1 tdvandenberg cpp   1267 Mar  5 23:53 StringComparisonWithWildCard.java
+-rw------- 1 tdvandenberg cpp   1038 Apr 16 21:45 TwoDarray.class
+-rw------- 1 tdvandenberg cpp   1464 Apr 16 21:45 TwoDarray.java
+-rw------- 1 tdvandenberg cpp   1588 Apr 16 23:21 TwoDarrayTest.class
+-rw------- 1 tdvandenberg cpp   1387 Apr 16 22:46 TwoDarrayTest.java
+-rw------- 1 tdvandenberg cpp   1098 Feb 12 15:49 VendingMachine.class
+-rw------- 1 tdvandenberg cpp    800 Feb 12 15:27 VendingMachine.java
+-rw------- 1 tdvandenberg cpp   1379 Apr 23 23:01 WordReplacement.class
+-rw------- 1 tdvandenberg cpp    862 Apr 23 23:01 WordReplacement.java
+-rw------- 1 tdvandenberg cpp   1698 Apr 23 23:01 WordReplacementWithMethod.class
+-rw------- 1 tdvandenberg cpp   1287 Apr 23 23:02 WordReplacementWithMethod.java
+-rw------- 1 tdvandenberg cpp    123 Apr  9 23:49 data.out
+-rw------- 1 tdvandenberg cpp     75 Apr  9 23:28 [00;32mdata.txt[0m
+-rw-r--r-- 1 tdvandenberg cpp  47285 Mar  5 21:22 [00;32mhs_err_pid102948.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46609 Apr  9 21:36 [00;32mhs_err_pid10640.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47755 Mar  5 22:00 [00;32mhs_err_pid120064.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47226 Apr  9 21:47 [00;32mhs_err_pid13834.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46896 Apr  9 21:51 [00;32mhs_err_pid15098.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46353 Mar  5 23:16 [00;32mhs_err_pid18666.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47030 Apr  9 21:13 [00;32mhs_err_pid24415.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47076 Mar  5 23:37 [00;32mhs_err_pid27983.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47300 Mar  5 23:49 [00;32mhs_err_pid33237.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47282 Mar  5 23:51 [00;32mhs_err_pid34690.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46940 Mar  5 23:54 [00;32mhs_err_pid35599.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46951 Mar  6 00:00 [00;32mhs_err_pid37253.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46620 Apr  9 23:49 [00;32mhs_err_pid46296.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47310 Mar  5 22:50 [00;32mhs_err_pid7190.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46654 Apr 16 21:13 [00;32mhs_err_pid94439.log[0m
+-rw------- 1 tdvandenberg cpp   2646 Feb  5 11:24 [00;32mpractice1.txt[0m
+-rw------- 1 tdvandenberg cpp      0 Apr 23 23:02 [00;32mpractice10.txt[0m
+-rw------- 1 tdvandenberg cpp   7204 Feb 12 15:50 [00;32mpractice2.txt[0m
+-rw------- 1 tdvandenberg cpp  10440 Feb 19 23:56 [00;32mpractice3.txt[0m
+-rw------- 1 tdvandenberg cpp   6791 Feb 26 23:22 [00;32mpractice4.txt[0m
+-rw------- 1 tdvandenberg cpp  10301 Mar 12 23:56 [00;32mpractice6.txt[0m
+-rw------- 1 tdvandenberg cpp  11223 Mar 19 23:21 [00;32mpractice7.txt[0m
+-rw------- 1 tdvandenberg cpp  17148 Apr  9 23:50 [00;32mpractice8.txt[0m
+-rw------- 1 tdvandenberg cpp  14874 Apr 16 23:24 [00;32mpractice9.txt[0m
+-rw-r--r-- 1 tdvandenberg cpp 211685 Mar  5 21:22 [00;32mreplay_pid102948.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:36 [00;32mreplay_pid10640.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 212148 Mar  5 22:00 [00;32mreplay_pid120064.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:47 [00;32mreplay_pid13834.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:51 [00;32mreplay_pid15098.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 23:16 [00;32mreplay_pid18666.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 21:13 [00;32mreplay_pid24415.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  32001 Mar  5 23:37 [00;32mreplay_pid27983.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  31550 Mar  5 23:49 [00;32mreplay_pid33237.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 211313 Mar  5 23:51 [00;32mreplay_pid34690.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 23:54 [00;32mreplay_pid35599.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  6 00:00 [00;32mreplay_pid37253.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr  9 23:49 [00;32mreplay_pid46296.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 22:50 [00;32mreplay_pid7190.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Apr 16 21:13 [00;32mreplay_pid94439.log[0m
+-rw------- 1 tdvandenberg cpp    555 Feb 19 23:49 roots.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat WordReplacement.java
+import java.util.Scanner;
+public class WordReplacement {
+   public static void main(String[] args)
+   {
+      Scanner kb = new Scanner(System.in);
+      System.out.println("enter a line of text (blank line to stop)");
+      String s1 = kb.nextLine();
+      while (!s1.equals(""))
+      {
+         int position = s1.indexOf("hate");
+         if(position==-1)
+         {
+            System.out.printf("\"%s\" is not found.\n", s1);
+         }
+         else{
+            String starting = s1.substring(0, position);
+            String ending = s1.substring(position+4);
+            String line = starting + "love" + ending;
+            System.out.println("I have rephrased that line to read: ");
+            System.out.println(line);
+         }
+         System.out.println("\nenter another line (blank line to stop): ");
+         s1 = kb.nextLine();
+      }
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac WordReplacement.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java WordReplacement
+enter a line of text (blank line to stop)
+I hate you.
+I have rephrased that line to read: 
+I love you.
+
+enter another line (blank line to stop): 
+I hate, hate, hate you.
+I have rephrased that line to read: 
+I love, hate, hate you.
+
+enter another line (blank line to stop): 
+I lvoe you       ove you.
+"I love you." is not found.
+
+enter another line (blank line to stop): 
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat WordReplacementWithMethod.java
+import java.util.Scanner;
+public class WordReplacementWithMethod {
+   public static void wordReplacement(String str1, String str2, String str3)
+   {
+      while (!str1.equals(""))
+      {
+         int position = str1.indexOf(str2);
+         if(position==-1)
+         {
+            System.out.printf("\"%s\" is not found.\n", str2);
+            return;
+         }
+         else{
+            String starting = str1.substring(0, position);
+            String ending = str1.substring(position+str2.length());
+            String line = starting + str3 + ending;
+            System.out.println("I have rephrased that line to read: ");
+            System.out.println(line);
+            return;
+         }
+      }
+   }
+   public static void main(String[] args)
+   {
+      Scanner kb = new Scanner(System.in);
+      System.out.println("enter a line of text (blank to stop):");
+      String s1 = kb.nextLine();
+      while(!s1.equals(""))
+      {
+         System.out.print("enter a substring to be replaced: ");
+         String s2 = kb.nextLine();
+         System.out.print("enter the new substring: ");
+         String s3 = kb.nextLine();
+         wordReplacement(s1, s2, s3);
+         System.out.println("\nenter another line (blank line to stop):");
+         s1 = kb.nextLine();
+      }
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac WordReplacementWithMethod.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java WordReplacementWithMethod
+enter a line of text (blank to stop):
+I love you.
+enter a substring to be replaced: hate
+enter the new substring: love
+"hate" is not found.
+
+enter another line (blank line to stop):
+I hatey  you.
+enter a substring to be replaced: hate
+enter the new substring: love, love, love
+I have rephrased that line to read: 
+I love, love, love you.
+
+enter another line (blank line to stop):
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat Oass[K[K[K[KPasswordVerifier.java
+public class PasswordVerifier {
+   private static final int MINLENGTH = 6;
+   public static void verifyPass(String s1)
+   {
+      boolean passValid = true;
+      if(s1.length()<MINLENGTH)
+      {
+         System.out.println("- length must be at least 6");
+         passValid = false;
+      }
+      if(s1.equals(s1.toLowerCase()))
+      {
+         System.out.println("- need at least one uppercase letter");
+         passValid = false;
+      }
+      if(s1.equals(s1.toUpperCase()))
+      {
+         System.out.println("- need at least one lowercase letter");
+         passValid = false;
+      }
+      if(!verifyNums(s1))
+      {
+         passValid=false;
+         System.out.println("- need at least one digit");
+      }
+      if(passValid)
+      {
+         System.out.println("Valid password.");
+      }
+      else{
+         System.out.println("Invalid password.\n");
+      }
+   }
+   public static boolean verifyNums(String s1)
+   {
+      boolean verified = false;
+      for(int i=0; i<s1.length(); i++)
+      {
+         if(Character.isDigit(s1.charAt(i)))
+         {
+            verified = true;
+         }
+      }
+      return verified;
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat O[KPasswordTest.java
+import java.util.Scanner;
+public class PasswordTest {
+   public static void main(String[] args)
+   {
+      Scanner kb = new Scanner(System.in);
+      System.out.print("Enter a password: ");
+      String str = kb.nextLine();
+      PasswordVerifier.verifyPass(str);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac PasswordTest.a[Kjava
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java PasswordTest
+Enter a password: Hello2021
+Valid password.
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m 12 Cats
+bash: 12: command not found
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m 12 Catsjava PasswordTest
+Enter a password: 12 Cats
+Valid password.
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java PasswordTest
+Enter a password: aBC45
+- length must be at least 6
+Invalid password.
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java PasswordTest
+Enter a password: 123456
+- need at least one uppercase letter
+- need at least one lowercase letter
+Invalid password.
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java PasswordTest
+Enter a password: abc
+- length must be at least 6
+- need at least one uppercase letter
+- need at least one digit
+Invalid password.
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java PasswordTest
+Enter a password: +-*/
+- length must be at least 6
+- need at least one uppercase letter
+- need at least one lowercase letter
+- need at least one digit
+Invalid password.
+
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m exit
+exit
+
+Script done on 2021-04-23 23:06:42-07:00 [COMMAND_EXIT_CODE="0"]

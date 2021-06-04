@@ -1,0 +1,320 @@
+Script started on 2021-04-30 23:23:35-07:00 [TERM="xterm" TTY="/dev/pts/10" COLUMNS="125" LINES="67"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice/practice11
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m ls -l
+total 157
+-rw------- 1 tdvandenberg cpp   413 Apr 30 22:13 Document.class
+-rw------- 1 tdvandenberg cpp   217 Apr 30 22:12 Document.java
+-rw------- 1 tdvandenberg cpp  1756 Apr 30 22:15 DocumentTest.class
+-rw------- 1 tdvandenberg cpp  1293 Apr 30 22:12 DocumentTest.java
+-rw------- 1 tdvandenberg cpp  1174 Apr 30 22:15 Email.class
+-rw------- 1 tdvandenberg cpp  1051 Apr 30 22:15 Email.java
+-rw------- 1 tdvandenberg cpp   756 Apr 30 22:15 File.class
+-rw------- 1 tdvandenberg cpp   492 Apr 30 22:13 File.java
+-rw-r--r-- 1 tdvandenberg cpp 47183 Apr 30 22:58 [0m[00;32mhs_err_pid3840.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 46896 Apr 30 22:58 [00;32mhs_err_pid3875.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 46933 Apr 30 23:02 [00;32mhs_err_pid5095.log[0m
+-rw------- 1 tdvandenberg cpp     0 Apr 30 23:23 [00;32mpractice11.txt[0m
+-rw-r--r-- 1 tdvandenberg cpp     0 Apr 30 22:58 [00;32mreplay_pid3840.log[0m
+-rw-r--r-- 1 tdvandenberg cpp     0 Apr 30 22:58 [00;32mreplay_pid3875.log[0m
+-rw-r--r-- 1 tdvandenberg cpp     0 Apr 30 23:02 [00;32mreplay_pid5095.log[0m
+drwx--s--x 2 tdvandenberg cpp    13 Apr 30 23:23 [01;34mtask2[0m
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m cat Document.java
+public class Document {
+   private String text;
+   public Document()
+   {
+      text="";
+   }
+   public Document(String text)
+   {
+      this.text=text;
+   }
+   public String toString()
+   {
+      return text;
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m cat Email.java
+public class Email extends Document{
+   private String sender;
+   private String recipient;
+   private String title;
+   public Email()
+   {
+      super();
+      sender ="";
+      recipient="";
+      title="";
+   }
+   public Email(String body, String sender, String recipient, String title)
+   {
+      super(body);
+      this.sender=sender;
+      this.recipient=recipient;
+      this.title=title;
+   }
+   public String getSender()
+   {
+      return sender;
+   }
+   public void setSender(String sender)
+   {
+      this.sender=sender;
+   }
+   public String getRecipient()
+   {
+      return recipient;
+   }
+   public void setRecipient(String recipient)
+   {
+      this.recipient=recipient;
+   }
+   public String getTitle()
+   {
+      return title;
+   }
+   public void setTitle(String title)
+   {
+      this.title=title;
+   }
+   public String toString()
+   {
+      return "Sender: "+sender
+             +"\nRecipient: "+recipient
+             +"\nTitle: "+title
+             +"\nContent: "+super.toString();//use super to call it from document.java
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m cat File.java
+public class File extends Document {
+   private String pathname;
+   public File()
+   {
+      super();
+      pathname="";
+   }
+   public File(String body, String pathname)
+   {
+      super(body);
+      this.pathname=pathname;
+   }
+   public void setPathname(String s)
+   {
+      pathname = s;
+   }
+   public String getPathname()
+   {
+      return pathname;
+   }
+   @Override
+   public String toString()
+   {
+      return "Pathname: "+pathname
+             +"\nBody: "+super.toString();
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m cat DocumetnTest.java
+cat: DocumetnTest.java: No such file or directory
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m cat DocumetnTest.java[1PTest.java[1PTest.javanTest.javatTest.java
+public class DocumentTest {
+   public static void main(String[] args)
+   {
+      Email email1= new Email("Body about programming in Java",
+                              "Larry", "David", "Programming");
+      Email email2 = new Email("Body about running marathons",
+                               "Mary", "Emily", "races");
+      File file1 = new File("Contents about some Java file",
+                            "/user/file.txt");
+      File file2 = new File("Contents about marathon races",
+                            "run.txt");
+      System.out.println("Email1 --\n" + email1);
+      System.out.println("Email2 --\n" + email2);
+      System.out.println("File1 --\n" + file1);
+      System.out.println("File2 --\n" + file2);
+      System.out.println("Which contains Java?");
+      if (ContainsKeyword(email1,"Java"))
+         System.out.println(" Email1");
+      if (ContainsKeyword(email2,"Java"))
+         System.out.println(" Email2");
+      if (ContainsKeyword(file1,"Java"))
+         System.out.println(" File1");
+      if (ContainsKeyword(file2,"Java"))
+         System.out.println(" File2");
+   }
+   public static boolean ContainsKeyword(Document docObject, String keyword)
+   {
+      if (docObject.toString().indexOf(keyword) >= 0)
+         return true;
+      return false;
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m javac DocumentTest/[K.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m java DocumentTest
+Email1 --
+Sender: Larry
+Recipient: David
+Title: Programming
+Content: Body about programming in Java
+Email2 --
+Sender: Mary
+Recipient: Emily
+Title: races
+Content: Body about running marathons
+File1 --
+Pathname: /user/file.txt
+Body: Contents about some Java file
+File2 --
+Pathname: run.txt
+Body: Contents about marathon races
+Which contains Java?
+ Email1
+ File1
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11 $[00m cdf[K task2
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice/practice11/task2
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m ls -l
+total 320
+-rw------- 1 tdvandenberg cpp    626 Apr 30 23:15 FileIO.class
+-rw------- 1 tdvandenberg cpp    409 Apr 30 22:17 FileIO.java
+-rw------- 1 tdvandenberg cpp   1343 Apr 30 23:21 FileIOSubClass.class
+-rw------- 1 tdvandenberg cpp   1088 Apr 30 23:21 FileIOSubClass.java
+-rw------- 1 tdvandenberg cpp   1720 Apr 30 23:21 FileIOTest.class
+-rw------- 1 tdvandenberg cpp   1212 Apr 30 22:56 FileIOTest.java
+-rw------- 1 tdvandenberg cpp     31 Apr 30 23:22 [0m[00;32mgrade1.txt[0m
+-rw------- 1 tdvandenberg cpp     12 Apr 30 23:23 [00;32mgrade3.txt[0m
+-rw-r--r-- 1 tdvandenberg cpp  47197 Apr 30 23:15 [00;32mhs_err_pid8514.log[0m
+-rw------- 1 tdvandenberg cpp     12 Apr 30 23:21 out.out
+-rw-r--r-- 1 tdvandenberg cpp 212422 Apr 30 23:15 [00;32mreplay_pid8514.log[0m
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m cat FileIO.java
+import java.io.*;
+public class FileIO
+{
+ // This method opens file s,
+ // reads and outputs to screen its contents
+ void fileRead(String s) throws IOException
+ {
+ System.out.println("fileRead in the base class reached ");
+ }
+ // This method opens file s
+ // and writes array a to it
+ void fileWrite(String s, String[] a) throws IOException
+ {
+ System.out.println("fileWrite in the base class reached ");
+ }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m cat FileIOSubClass.java
+import java.io.*;
+import java.util.Scanner;
+public class FileIOSubClass extends FileIO
+{
+   @Override
+   public void fileRead(String s) throws IOException
+   {
+      File myFile = new File(s);
+      if(!myFile.exists())
+      {
+         System.out.printf("Error: input file %s does not exist\n", s);
+         System.exit(0);
+      }
+      Scanner inputFile = new Scanner(myFile);
+      while (inputFile.hasNext())
+         System.out.println(inputFile.nextLine());
+      inputFile.close();
+   }
+   @Override
+   public void fileWrite(String s, String[] a) throws IOException
+   {
+      PrintWriter outputFile = new PrintWriter(s);
+      for (int i=0; i<a.length; i++)
+         outputFile.println(a[i]);
+      outputFile.close();
+   }
+   public void fileRead(File file) throws IOException
+   {
+      if (!file.exists())
+      {
+         System.out.print("Error: input file not found\n");
+         System.exit(0);
+      }
+      Scanner inputFile = new Scanner(file);
+      while (inputFile.hasNext())
+         System.out.println(inputFile.nextLine());
+      inputFile.close();
+   }
+      
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m cat FileIOTest.java
+import java.util.Scanner;
+import java.io.*;
+public class FileIOTest
+{
+   public static void main(String[] args) throws IOException
+   {
+      FileIO obj = new FileIOSubClass();
+      Scanner kb = new Scanner(System.in);
+      System.out.print("Please enter an input file name: ");
+      String inFile = kb.nextLine();
+      System.out.println("Test fileRead(String) --");
+      obj.fileRead(inFile);
+
+      System.out.print("please enter an output file name: ");
+      String outFile = kb.nextLine();
+      System.out.print("enter how many lines you have to print to the output file: ");
+      int size = kb.nextInt();
+      kb.nextLine();
+      String[] array = new String[size];
+      for (int i=0; i<size; i++)
+      {
+         System.out.print("enter line " + (i+1) + ": ");
+         array[i] = kb.nextLine();
+      }
+      System.out.println("Test fileWrite --");
+      obj.fileWrite(outFile, array);
+      System.out.println("check output file: " +outFile);
+      
+      System.out.print("enter another input filename: ");
+      String inFile2 = kb.nextLine();
+      File myFile = new File(inFile2);
+      System.out.println("Test fileRead(File) -- ");
+      ((FileIOSubClass)obj).fileRead(myFile);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m javac FileIOTest.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m java FileIOTest
+Please enter an input file name: grade.txt
+Test fileRead(String) --
+Error: input file grade.txt does not exist
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m java FileIOTest
+Please enter an input file name: grade1.txt
+Test fileRead(String) --
+10
+30
+50
+70
+90
+100
+80
+60
+40
+20
+please enter an output file name: out.out
+enter how many lines you have to print to the output file: 3
+enter line 1: 100
+enter line 2: 100   Takj  sk #2
+enter line 3: overloading vs. overriding demo
+Test fileWrite --
+check output file: out.out
+enter another input filename: grade3.txt
+Test fileRead(File) -- 
+100
+100
+100
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m cat out.out
+100
+Task #2
+overloading vs. overriding demo
+]0;tdvandenberg@costello:~/cs1400/codingPractice/practice11/task2[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice/practice11/task2 $[00m exit
+exit
+
+Script done on 2021-04-30 23:26:51-07:00 [COMMAND_EXIT_CODE="0"]

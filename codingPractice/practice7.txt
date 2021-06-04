@@ -1,0 +1,237 @@
+Script started on 2021-03-19 23:20:24-07:00 [TERM="xterm" TTY="/dev/pts/57" COLUMNS="125" LINES="67"]
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m pwd
+/user/tdvandenberg/cs1400/codingPractice
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m ls -l
+total 1394
+-rw------- 1 tdvandenberg cpp    870 Mar 12 22:54 Car.class
+-rw------- 1 tdvandenberg cpp    665 Mar 12 22:54 Car.java
+-rw------- 1 tdvandenberg cpp   1184 Mar 12 23:56 CarTest.class
+-rw------- 1 tdvandenberg cpp    890 Mar 12 23:00 CarTest.java
+-rw------- 1 tdvandenberg cpp    897 Mar 19 23:19 CarpetCalculator.class
+-rw------- 1 tdvandenberg cpp    598 Mar 19 23:06 CarpetCalculator.java
+-rw------- 1 tdvandenberg cpp   1031 Feb 26 23:20 Exam.class
+-rw------- 1 tdvandenberg cpp    613 Feb 26 22:03 Exam.java
+-rw------- 1 tdvandenberg cpp    660 Feb 19 23:56 FormattedOutput.class
+-rw------- 1 tdvandenberg cpp    378 Feb 19 22:59 FormattedOutput.java
+-rw------- 1 tdvandenberg cpp   3378 Mar  5 23:54 Geometry.class
+-rw-r--r-- 1 tdvandenberg cpp   6016 Mar  5 21:23 Geometry.java
+-rw------- 1 tdvandenberg cpp    287 Feb 26 22:38 HollowSquare.java
+-rw------- 1 tdvandenberg cpp    820 Mar 19 22:43 HotDogStand.class
+-rw------- 1 tdvandenberg cpp    498 Mar 19 22:43 HotDogStand.java
+-rw------- 1 tdvandenberg cpp   1217 Mar 19 23:14 HotDogStandTest.class
+-rw------- 1 tdvandenberg cpp   1170 Mar 19 22:52 HotDogStandTest.java
+-rw------- 1 tdvandenberg cpp   1197 Feb 12 15:46 KeyboardInput.class
+-rw------- 1 tdvandenberg cpp    741 Feb 11 20:07 KeyboardInput.java
+-rw------- 1 tdvandenberg cpp   1104 Feb 12 15:48 NameAndInitials.class
+-rw------- 1 tdvandenberg cpp    893 Feb 12 14:48 NameAndInitials.java
+-rw------- 1 tdvandenberg cpp    721 Feb 26 23:21 Pattern.class
+-rw------- 1 tdvandenberg cpp    224 Feb 26 22:28 Pattern.java
+-rw------- 1 tdvandenberg cpp   1003 Feb  5 11:22 Pay.class
+-rw-r--r-- 1 tdvandenberg cpp    978 Feb  5 11:16 Pay.java
+-rw------- 1 tdvandenberg cpp  17032 Mar  5 23:56 [0m[00;32mPractice5.txt[0m
+-rw------- 1 tdvandenberg cpp      0 Mar  6 00:01 [00;32mPractice5p2.txt[0m
+-rw------- 1 tdvandenberg cpp    911 Mar  6 00:01 PrimeChecker.class
+-rw------- 1 tdvandenberg cpp    825 Mar  6 00:00 PrimeChecker.java
+-rw------- 1 tdvandenberg cpp    893 Mar 19 23:19 RoomCarpet.class
+-rw------- 1 tdvandenberg cpp    521 Mar 19 23:19 RoomCarpet.java
+-rw------- 1 tdvandenberg cpp    745 Mar 19 23:18 RoomDimension.class
+-rw------- 1 tdvandenberg cpp    467 Mar 19 23:17 RoomDimension.java
+-rw------- 1 tdvandenberg cpp    709 Mar 12 23:26 SavingsAccount.class
+-rw------- 1 tdvandenberg cpp    719 Mar 12 23:34 SavingsAccount.java
+-rw------- 1 tdvandenberg cpp   1509 Mar 12 23:54 SavingsAccountTest.java
+-rw------- 1 tdvandenberg cpp    493 Feb 26 23:19 Seperate
+-rw------- 1 tdvandenberg cpp    166 Feb 26 22:52 SeperateEvenOddNumbers
+-rw------- 1 tdvandenberg cpp    640 Feb 19 23:05 StringComparison.class
+-rw------- 1 tdvandenberg cpp    666 Feb 19 23:53 StringComparison.java
+-rw------- 1 tdvandenberg cpp   1267 Mar  5 23:53 StringComparisonWithWildCard.java
+-rw------- 1 tdvandenberg cpp   1098 Feb 12 15:49 VendingMachine.class
+-rw------- 1 tdvandenberg cpp    800 Feb 12 15:27 VendingMachine.java
+-rw-r--r-- 1 tdvandenberg cpp  47285 Mar  5 21:22 [00;32mhs_err_pid102948.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47755 Mar  5 22:00 [00;32mhs_err_pid120064.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46353 Mar  5 23:16 [00;32mhs_err_pid18666.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47076 Mar  5 23:37 [00;32mhs_err_pid27983.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47300 Mar  5 23:49 [00;32mhs_err_pid33237.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47282 Mar  5 23:51 [00;32mhs_err_pid34690.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46940 Mar  5 23:54 [00;32mhs_err_pid35599.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  46951 Mar  6 00:00 [00;32mhs_err_pid37253.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  47310 Mar  5 22:50 [00;32mhs_err_pid7190.log[0m
+-rw------- 1 tdvandenberg cpp   2646 Feb  5 11:24 [00;32mpractice1.txt[0m
+-rw------- 1 tdvandenberg cpp   7204 Feb 12 15:50 [00;32mpractice2.txt[0m
+-rw------- 1 tdvandenberg cpp  10440 Feb 19 23:56 [00;32mpractice3.txt[0m
+-rw------- 1 tdvandenberg cpp   6791 Feb 26 23:22 [00;32mpractice4.txt[0m
+-rw------- 1 tdvandenberg cpp  10301 Mar 12 23:56 [00;32mpractice6.txt[0m
+-rw------- 1 tdvandenberg cpp      0 Mar 19 23:20 [00;32mpractice7.txt[0m
+-rw-r--r-- 1 tdvandenberg cpp 211685 Mar  5 21:22 [00;32mreplay_pid102948.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 212148 Mar  5 22:00 [00;32mreplay_pid120064.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 23:16 [00;32mreplay_pid18666.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  32001 Mar  5 23:37 [00;32mreplay_pid27983.log[0m
+-rw-r--r-- 1 tdvandenberg cpp  31550 Mar  5 23:49 [00;32mreplay_pid33237.log[0m
+-rw-r--r-- 1 tdvandenberg cpp 211313 Mar  5 23:51 [00;32mreplay_pid34690.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 23:54 [00;32mreplay_pid35599.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  6 00:00 [00;32mreplay_pid37253.log[0m
+-rw-r--r-- 1 tdvandenberg cpp      0 Mar  5 22:50 [00;32mreplay_pid7190.log[0m
+-rw------- 1 tdvandenberg cpp    555 Feb 19 23:49 roots.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat HotDogStand.java
+public class HotDogStand
+{
+   private int id;
+   private int numSold;
+   private static int totalSold = 0;
+   public HotDogStand(int newID, int newNumSold)
+   {
+      id = newID;
+      numSold = newNumSold;
+      totalSold += newNumSold;
+   }
+   public void justSold()
+   {
+      numSold++;
+      totalSold++;
+   }
+   public String toString()
+   {
+      return String.format("Stand %d sold %d hot dogs.\n", id, numSold);
+   }
+   public static int getTotalSold()
+   {
+      return totalSold;
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat HotDogStandTest.java
+public class HotDogStandTest
+{
+   public static void main(String[] args)
+   {
+      System.out.println("Test our code with 3 hot dog stands created,");
+      System.out.println("each sells a variety of hot dogs: ");
+      HotDogStand s1 = new HotDogStand(1, 0);
+      HotDogStand s2 = new HotDogStand(2, 0);
+      HotDogStand s3 = new HotDogStand(3, 33);
+      System.out.print(s1);
+      System.out.print(s2);
+      System.out.print(s3);
+      System.out.printf("Total sold = %d\n", HotDogStand.getTotalSold());
+
+      System.out.println("\nSold at stand 1, 2, 1, 1, 2: ");
+      s1.justSold();
+      s2.justSold();
+      s1.justSold();
+      s1.justSold();
+      s2.justSold();
+      System.out.print(s1);
+      System.out.print(s2);
+      System.out.print(s3);
+      System.out.printf("Total sold = %d\n", HotDogStand.getTotalSold());
+
+      System.out.println("\nSold at stand 3, 3, 2, 1, 1: ");
+      s3.justSold();
+      s3.justSold();
+      s2.justSold();
+      s1.justSold();
+      s1.justSold();
+      System.out.print(s1);
+      System.out.print(s2);
+      System.out.print(s3);
+      System.out.printf("Total sold = %d\n", HotDogStand.getTotalSold());
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac HotDogStandTest.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac HotDogStandTest.java[1P HotDogStandTest.java[C0HotDogStandTest.java[1PHotDogStandTest.java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K
+Test our code with 3 hot dog stands created,
+each sells a variety of hot dogs: 
+Stand 1 sold 0 hot dogs.
+Stand 2 sold 0 hot dogs.
+Stand 3 sold 33 hot dogs.
+Total sold = 33
+
+Sold at stand 1, 2, 1, 1, 2: 
+Stand 1 sold 3 hot dogs.
+Stand 2 sold 2 hot dogs.
+Stand 3 sold 33 hot dogs.
+Total sold = 38
+
+Sold at stand 3, 3, 2, 1, 1: 
+Stand 1 sold 5 hot dogs.
+Stand 2 sold 3 hot dogs.
+Stand 3 sold 35 hot dogs.
+Total sold = 43
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat RoomDimesnion[K[K[K[K[Knsioin[K[K[K[K[Ksion.java
+public class RoomDimension
+{
+   private double length;
+   private double width;
+   public RoomDimension(double l, double w)
+   {
+      length = l;
+      width = w;
+   }
+   public RoomDimension(RoomDimension obj2)
+   {
+      this.length = obj2.length;
+      this.width = obj2.width;
+   }
+   public double getArea()
+   {
+      return length*width;
+   }
+   public String toString()
+   {
+      return String.format("\nLength = %.1f\nWidth = %.1f", length, width);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat RoomCarpet.java
+public class RoomCarpet
+{
+   private RoomDimension size;
+   private double carpetCost;
+   public RoomCarpet(RoomDimension d, double cost)
+   {
+      size = new RoomDimension(d);
+      carpetCost = cost;
+   }
+   public double getTotalCost()
+   {
+      return size.getArea() * carpetCost;
+   }
+   public String toString()
+   {
+      String str = "\nRoom dimesnion:" + size
+                   + "\nCarpet cost per square foot: $" + carpetCost
+                   +"\nTotal cost: $" + getTotalCost();
+      return str;
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m cat CarpetCalculator.java
+import java.util.Scanner;
+public class CarpetCalculator
+{
+   public static void main(String[] args)
+   {
+      Scanner kb = new Scanner(System.in);
+      System.out.print("enter the length of the room: ");
+      double length = kb.nextDouble();
+      System.out.print("enter the width of the room: ");
+      double width = kb.nextDouble();
+      System.out.print("enter the cost per square foot: ");
+      double carpetPrice = kb.nextDouble();
+
+      RoomDimension d = new RoomDimension(length, width);
+      RoomCarpet room = new RoomCarpet(d, carpetPrice);
+      System.out.println(room);
+   }
+}
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m javac CarpetCa;l[K[Klculator.java
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m java CarpetCalculator
+enter the length of the room: 10
+enter the width of the room: 12
+enter the cost per square foot: 8
+
+Room dimesnion:
+Length = 10.0
+Width = 12.0
+Carpet cost per square foot: $8.0
+Total cost: $960.0
+]0;tdvandenberg@costello:~/cs1400/codingPractice[01;32mtdvandenberg@costello[01;34m ~/cs1400/codingPractice $[00m exit
+exit
+
+Script done on 2021-03-19 23:21:53-07:00 [COMMAND_EXIT_CODE="0"]
